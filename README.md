@@ -108,11 +108,4 @@ To ensure the scalability of the application, we implemented the following measu
 • We used the MongoDB driver's built-in support for connection pooling to allow the server to handle a large number of concurrent connections.
 • We used the cluster module in Node.js to create a cluster of worker processes, which allows the server to take advantage of multi-core systems and improve performance.
  
-## Refererence 
-## initial CRUD application open-source-code-template: https://github.com/K45-94/plum-ui-components-prototype
-Plum-UI is a social app template.
-Optimizing mobile/small-screen view.
-With swipe to go back transitions.
-Contact through kelvinhiuhu@live.com
 
-Also, check out the initial Plum from here and use mobile view =>https://plum-ui.surge.sh/
