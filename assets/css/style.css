@@ -664,3 +664,64 @@ small {
     background-position-x: 30%;
   }
 }
+
+/* ---- Button alignment and sizing fix ---- */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;     /* centers both on mobile */
+  gap: 12px;
+  margin-top: 24px;
+  margin-bottom: 60px;
+}
+
+.readme,
+.contactme {
+  display: inline-block;
+  padding: 10px 28px;
+  font-weight: 600;
+  border: 2px solid #004d40;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+/* Primary and secondary look */
+.readme {
+  background-color: #004d40;   /* filled teal */
+  color: #ffffff;
+}
+
+.contactme {
+  background-color: transparent;  /* outlined */
+  color: #004d40;
+}
+
+/* Hover effects */
+.readme:hover {
+  background-color: #00796b;
+  transform: translateY(-2px);
+}
+
+.contactme:hover {
+  background-color: #004d40;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Responsive stacking */
+@media (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .readme,
+  .contactme {
+    width: 80%;
+    text-align: center;
+  }
+}
+
