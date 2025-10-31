@@ -1,47 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <!-- Homepage -->
   <url>
     <loc>https://www.tonylivins.com/</loc>
+    <lastmod>2025-10-31</lastmod>
     <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
     <image:image>
       <image:loc>https://www.tonylivins.com/assets/img/tony-livins.jpg</image:loc>
-      <image:caption>Tony Livins – AI Engineer &amp; Data Scientist</image:caption>
-      <image:title>Tony Livins – MSc Applied AI &amp; Data Science</image:title>
+      <image:title>Tony Livins – AI Engineer &amp; Data Scientist</image:title>
+      <image:caption>Tony Livins – MSc Applied AI &amp; Data Science</image:caption>
     </image:image>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://www.tonylivins.com/#about</loc>
+    <lastmod>2025-10-31</lastmod>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
   </url>
 
   <!-- Services -->
   <url>
     <loc>https://www.tonylivins.com/#services</loc>
+    <lastmod>2025-10-31</lastmod>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
   </url>
 
   <!-- Projects -->
   <url>
     <loc>https://www.tonylivins.com/#projects</loc>
+    <lastmod>2025-10-31</lastmod>
     <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Example project: LungGuard -->
+  <url>
+    <loc>https://www.tonylivins.com/projects/lungguard</loc>
+    <lastmod>2025-10-31</lastmod>
+    <priority>0.75</priority>
+    <changefreq>monthly</changefreq>
+    <image:image>
+      <image:loc>https://www.tonylivins.com/assets/img/lungguard-cover.jpg</image:loc>
+      <image:title>LungGuard – Multimodal Deep Learning for Early Lung Cancer Detection</image:title>
+      <image:caption>AI model integrating imaging, text, and clinical data for lung cancer prediction</image:caption>
+    </image:image>
   </url>
 
   <!-- Skills -->
   <url>
     <loc>https://www.tonylivins.com/#skills</loc>
+    <lastmod>2025-10-31</lastmod>
     <priority>0.6</priority>
+    <changefreq>quarterly</changefreq>
   </url>
 
   <!-- Education -->
   <url>
     <loc>https://www.tonylivins.com/#education</loc>
+    <lastmod>2025-10-31</lastmod>
     <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <!-- Blog (if available) -->
+  <url>
+    <loc>https://www.tonylivins.com/blog/</loc>
+    <lastmod>2025-10-31</lastmod>
+    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
   </url>
 
   <!-- Contact -->
   <url>
     <loc>https://www.tonylivins.com/#contact</loc>
+    <lastmod>2025-10-31</lastmod>
     <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
   </url>
 
 </urlset>
