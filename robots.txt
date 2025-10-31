@@ -1,4 +1,22 @@
+# Default rules for all crawlers
 User-agent: *
 Allow: /
-
+Crawl-delay: 1
 Sitemap: https://www.tonylivins.com/sitemap.xml
+
+# Googlebot (Google Search)
+User-agent: Googlebot
+Allow: /
+
+# Bingbot (Microsoft)
+User-agent: Bingbot
+Allow: /
+
+# DuckDuckBot (DuckDuckGo)
+User-agent: DuckDuckBot
+Allow: /
+
+# GPTBot (OpenAI crawlers for AI indexing)
+User-agent: GPTBot
+Allow: /
+
