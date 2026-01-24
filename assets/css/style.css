@@ -1,14 +1,12 @@
-.profile-pic {
-  position: relative;
-  max-width: 130px;
-  max-height: 130px;
-  width: auto;
-  height: auto;
-  overflow: hidden;
-  margin: -31px;
-  margin-left: -7px;
+img.profile-pic {
+  width: 130px;
+  height: 130px;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+
   border: 6px solid rgba(0, 77, 64, 0.4);
-  border-radius: 50% !important;
+  border-radius: 10px !important;   /* square with slight softness */
 }
 
 .profile-pic img {
@@ -21,6 +19,8 @@
   bottom: 0;
   right: 0;
 }
+
+
 
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
 
@@ -168,14 +168,19 @@ ul.table-of-contents li.logo a:hover {
 ul.side-nav.fixed li.logo {
   background-color: #fafafa;
   border-bottom: 1px solid #ddd;
-  box-sizing: content-box;
-  min-height: 90px;
-  padding: 30px 30px 40px;
+  min-height: 180px;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 ul.side-nav.fixed li.logo a {
-  font-weight: 200;
-  line-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 ul.table-of-contents li:not(.logo) a.active,
@@ -222,6 +227,8 @@ h3 {
 .full-height {
   height: 100vh;
 }
+
+
 
 /* ============================
    Intro Section
@@ -1007,3 +1014,4 @@ small {
   color: rgba(0,0,0,0.75);
   line-height: 1.6;
 }
+
