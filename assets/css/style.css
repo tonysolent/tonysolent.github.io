@@ -782,3 +782,161 @@ small {
 #slide-out.side-nav li > a:hover {
   background: rgba(0, 121, 107, 0.08);
 }
+
+.about-tab-panel { padding: 18px 0 6px; }
+/* Tabs: make inactive vs active clear (especially on mobile) */
+.tabs .tab a {
+  color: #9e9e9e;        /* inactive = muted grey */
+  font-weight: 600;
+}
+
+.tabs .tab a.active {
+  color: #00796B;        /* active = teal */
+  font-weight: 800;
+}
+
+.tabs .tab a:hover {
+  color: #004d40;        /* hover = darker teal */
+}
+
+.tabs .indicator {
+  background-color: #00796B;
+}
+
+/* Tabs with icons */
+.tabs .tab a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.tabs .tab a i {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.tabs .tab a span {
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+
+/* Mobile clarity */
+@media (max-width: 600px) {
+  .tabs .tab a {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+}
+
+.card { border-radius: 14px; }
+
+.about-hero {
+  background: linear-gradient(
+    135deg,
+    rgba(0,121,107,0.04),
+    rgba(0,0,0,0)
+  );
+}
+
+.about-hero blockquote {
+  font-style: italic;
+  background: rgba(0,121,107,0.05);
+  padding: 16px 20px;
+  border-radius: 10px;
+}
+
+.about-hero:hover {
+  transform: translateY(-4px);
+  transition: 0.3s ease;
+}
+
+/* ===============================
+   Technical Stack – Visual Upgrade
+   =============================== */
+
+.tech-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  margin: 6px 0 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.85);
+}
+
+.tech-filter i {
+  color: rgba(0,0,0,0.45);
+}
+
+.tech-filter input {
+  border: none !important;
+  outline: none !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  width: 100%;
+}
+
+/* Badge grid */
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* Chips */
+.about-tab-panel .chip {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(0, 121, 107, 0.08);
+  border: 1px solid rgba(0, 121, 107, 0.25);
+  color: #004d40;
+  font-weight: 650;
+  padding: 10px 12px;
+  height: auto;
+  line-height: 1.1;
+  border-radius: 999px;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.about-tab-panel .chip:hover {
+  transform: translateY(-2px);
+  background: rgba(0, 121, 107, 0.15);
+  border-color: rgba(0, 121, 107, 0.4);
+}
+
+/* Section summaries */
+.tab-summary {
+  margin: 10px 0 4px;
+  color: rgba(0,0,0,0.65);
+  font-size: 0.95rem;
+}
+
+/* Mobile tightening */
+@media (max-width: 600px) {
+  .about-tab-panel .chip {
+    padding: 9px 10px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Accordion fallback */
+.tech-accordion-wrap { display: none; }
+
+@media (max-width: 480px) {
+  .tabs { display: none; }
+  .tech-accordion-wrap { display: block; }
+  .about-tab-panel { display: none; } /* hide tab panels on tiny screens */
+}
+
+.tech-accordion-wrap .collapsible-header {
+  font-weight: 800;
+  color: #004d40;
+}
+
+.tech-accordion-wrap .collapsible-body {
+  padding-top: 8px;
+}
