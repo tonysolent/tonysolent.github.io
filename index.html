@@ -573,70 +573,146 @@
 
 
     <!-- Skills as Tabs -->
-    <h5 class="teal-text" style="margin-top:30px;">Technical Stack</h5>
+    <!-- Skills as Tabs -->
+<h5 class="teal-text" style="margin-top:30px;">Technical Stack</h5>
 
-    <div class="card">
-      <div class="card-content" style="padding-bottom:6px;">
-        <ul class="tabs">
-          <li class="tab col s3"><a class="active" href="#about-tab-languages">Languages</a></li>
-          <li class="tab col s3"><a href="#about-tab-data">Data</a></li>
-          <li class="tab col s3"><a href="#about-tab-ml">ML & NLP</a></li>
-          <li class="tab col s3"><a href="#about-tab-tools">Tools</a></li>
-        </ul>
+<div class="card">
+  <div class="card-content">
 
-        <div id="about-tab-languages" class="about-tab-panel">
-          <div class="chip">Python</div><div class="chip">Java</div><div class="chip">JavaScript</div>
-          <div class="chip">C</div><div class="chip">C++</div><div class="chip">HTML/CSS</div>
-          <div class="chip">Bash</div><div class="chip">R</div><div class="chip">SQL</div>
-          <div class="chip">Markdown</div><div class="chip">PlantUML</div>
+    
 
-          <p class="grey-text text-darken-2" style="margin-top:10px;">
-            <strong>R-</strong> statistical analysis and visualisation.
-            <strong>SQL-</strong> advanced joins, window functions, analytics.
-            <strong>PlantUML-</strong> system architecture diagrams.
-          </p>
-        </div>
+    <!-- Tabs -->
+    <ul class="tabs">
+  <li class="tab col s3">
+    <a class="active" href="#about-tab-languages">
+      <i class="fa fa-code" aria-hidden="true"></i><span>Languages</span>
+    </a>
+  </li>
+  <li class="tab col s3">
+    <a href="#about-tab-data">
+      <i class="fa fa-database" aria-hidden="true"></i><span>Data</span>
+    </a>
+  </li>
+  <li class="tab col s3">
+    <a href="#about-tab-ml">
+      <i class="fa fa-brain" aria-hidden="true"></i><span>ML &amp; NLP</span>
+    </a>
+  </li>
+  <li class="tab col s3">
+    <a href="#about-tab-tools">
+      <i class="fa fa-wrench" aria-hidden="true"></i><span>Tools</span>
+    </a>
+  </li>
+</ul>
 
-        <div id="about-tab-data" class="about-tab-panel">
-          <div class="chip">MySQL</div><div class="chip">SQLite</div><div class="chip">PostgreSQL</div>
-          <div class="chip">MongoDB</div><div class="chip">Neo4j</div><div class="chip">Firebase</div>
-          <div class="chip">AWS S3</div><div class="chip">BigQuery</div><div class="chip">Elasticsearch</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
 
-          <p class="grey-text text-darken-2" style="margin-top:10px;">
-            Graph reasoning with <strong>Neo4j</strong>, cloud-scale querying with <strong>BigQuery</strong>,
-            scalable storage with <strong>AWS S3</strong>, and semantic search with <strong>Elasticsearch</strong>.
-          </p>
-        </div>
+  var tabs = document.querySelectorAll('.tabs');
+  if (window.M && M.Tabs) M.Tabs.init(tabs);
 
-        <div id="about-tab-ml" class="about-tab-panel">
-          <div class="chip">NumPy</div><div class="chip">Pandas</div><div class="chip">OpenCV</div>
-          <div class="chip">scikit-learn</div><div class="chip">Statsmodels</div>
-          <div class="chip">PyTorch</div><div class="chip">TensorFlow</div><div class="chip">Keras</div>
-          <div class="chip">XGBoost</div><div class="chip">LightGBM</div>
-          <div class="chip">Transformers</div><div class="chip">SpaCy</div><div class="chip">NLTK</div>
-          <div class="chip">SHAP</div><div class="chip">LIME</div><div class="chip">Grad-CAM</div>
+  var acc = document.getElementById('techAccordion');
 
-          <p class="grey-text text-darken-2" style="margin-top:10px;">
-            Explainability with <strong>SHAP</strong> and <strong>Grad-CAM</strong>.
-            NLP with <strong>Transformers</strong>, <strong>SpaCy</strong>, and <strong>NLTK</strong>.
-          </p>
-        </div>
+  function buildAccordionOnce() {
+    if (!acc) return;
+    if (acc.dataset.built === "1") return;
 
-        <div id="about-tab-tools" class="about-tab-panel">
-          <div class="chip">Git</div><div class="chip">Docker</div><div class="chip">AWS</div><div class="chip">GCP</div>
-          <div class="chip">Heroku</div><div class="chip">JIRA</div><div class="chip">MLflow</div>
-          <div class="chip">Jupyter</div><div class="chip">Google Colab</div>
-          <div class="chip">VS Code</div><div class="chip">PyCharm</div><div class="chip">Linux CLI</div>
-          <div class="chip">Streamlit Cloud</div><div class="chip">Hugging Face Spaces</div>
-          <div class="chip">Tableau</div><div class="chip">Power BI</div><div class="chip">LaTeX</div><div class="chip">Overleaf</div>
+    var items = [
+      { title: "Languages", icon: "fa fa-code", panel: "#about-tab-languages" },
+      { title: "Data", icon: "fa fa-database", panel: "#about-tab-data" },
+      { title: "ML & NLP", icon: "fa fa-robot", panel: "#about-tab-ml" },
+      { title: "Tools", icon: "fa fa-wrench", panel: "#about-tab-tools" }
+    ];
 
-          <p class="grey-text text-darken-2" style="margin-top:10px;">
-            Experiment tracking with <strong>MLflow</strong>, deployments via <strong>Streamlit Cloud</strong> and
-            <strong>Hugging Face Spaces</strong>, and reproducible workflows with <strong>Docker</strong> and <strong>Git</strong>.
-          </p>
-        </div>
+    acc.innerHTML = items.map(function (it) {
+      var panel = document.querySelector(it.panel);
+      var body = panel ? panel.innerHTML : "";
+      return (
+        '<li>' +
+          '<div class="collapsible-header">' +
+            '<i class="' + it.icon + '" aria-hidden="true"></i>' + it.title +
+          '</div>' +
+          '<div class="collapsible-body"><div>' + body + '</div></div>' +
+        '</li>'
+      );
+    }).join("");
+
+    if (window.M && M.Collapsible) M.Collapsible.init(acc);
+    acc.dataset.built = "1";
+  }
+
+  function isTiny() {
+    return window.matchMedia && window.matchMedia("(max-width: 480px)").matches;
+  }
+
+  function handleAccordion() {
+    if (isTiny()) buildAccordionOnce();
+  }
+
+  handleAccordion();
+  window.addEventListener("resize", handleAccordion);
+
+});
+</script>
+
+
+
+<!-- Mobile accordion fallback -->
+<div id="tech-accordion-wrap" class="tech-accordion-wrap">
+  <ul id="techAccordion" class="collapsible"></ul>
+</div>
+
+    <!-- Languages -->
+    <div id="about-tab-languages" class="about-tab-panel">
+      <p class="tab-summary">Core programming languages for AI systems and production pipelines.</p>
+      <div class="skill-badges">
+        <div class="chip">Python</div><div class="chip">Java</div><div class="chip">JavaScript</div>
+        <div class="chip">C</div><div class="chip">C++</div><div class="chip">HTML/CSS</div>
+        <div class="chip">Bash</div><div class="chip">R</div><div class="chip">SQL</div>
+        <div class="chip">Markdown</div><div class="chip">PlantUML</div>
       </div>
     </div>
+
+    <!-- Data -->
+    <div id="about-tab-data" class="about-tab-panel">
+      <p class="tab-summary">Relational, NoSQL, graph, and cloud-scale data platforms.</p>
+      <div class="skill-badges">
+        <div class="chip">MySQL</div><div class="chip">SQLite</div><div class="chip">PostgreSQL</div>
+        <div class="chip">MongoDB</div><div class="chip">Neo4j</div><div class="chip">Firebase</div>
+        <div class="chip">AWS S3</div><div class="chip">BigQuery</div><div class="chip">Elasticsearch</div>
+      </div>
+    </div>
+
+    <!-- ML & NLP -->
+    <div id="about-tab-ml" class="about-tab-panel">
+      <p class="tab-summary">Classical ML, deep learning, NLP, and explainable AI.</p>
+      <div class="skill-badges">
+        <div class="chip">NumPy</div><div class="chip">Pandas</div><div class="chip">OpenCV</div>
+        <div class="chip">scikit-learn</div><div class="chip">Statsmodels</div>
+        <div class="chip">PyTorch</div><div class="chip">TensorFlow</div><div class="chip">Keras</div>
+        <div class="chip">XGBoost</div><div class="chip">LightGBM</div>
+        <div class="chip">Transformers</div><div class="chip">SpaCy</div><div class="chip">NLTK</div>
+        <div class="chip">SHAP</div><div class="chip">LIME</div><div class="chip">Grad-CAM</div>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div id="about-tab-tools" class="about-tab-panel">
+      <p class="tab-summary">Experiment tracking, deployment, analytics, and reproducible workflows.</p>
+      <div class="skill-badges">
+        <div class="chip">Git</div><div class="chip">Docker</div><div class="chip">AWS</div><div class="chip">GCP</div>
+        <div class="chip">Heroku</div><div class="chip">JIRA</div><div class="chip">MLflow</div>
+        <div class="chip">Jupyter</div><div class="chip">Google Colab</div>
+        <div class="chip">VS Code</div><div class="chip">PyCharm</div><div class="chip">Linux CLI</div>
+        <div class="chip">Streamlit Cloud</div><div class="chip">Hugging Face Spaces</div>
+        <div class="chip">Tableau</div><div class="chip">Power BI</div>
+        <div class="chip">LaTeX</div><div class="chip">Overleaf</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
     <!-- Competencies + Expertise as Cards -->
     <h5 class="teal-text" style="margin-top:30px;">Core Competencies</h5>
@@ -1607,6 +1683,50 @@
       })
     })
   </script>
+
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Init Materialize tabs
+  var tabs = document.querySelectorAll('.tabs');
+  if (window.M && M.Tabs) {
+    M.Tabs.init(tabs);
+  }
+
+  var input = document.getElementById('techSearch');
+
+  function getActivePanel() {
+    var active = document.querySelector('.tabs .tab a.active');
+    if (!active) return null;
+    return document.querySelector(active.getAttribute('href'));
+  }
+
+  function filterChips() {
+    var panel = getActivePanel();
+    if (!panel || !input) return;
+
+    var query = input.value.toLowerCase().trim();
+    var chips = panel.querySelectorAll('.chip');
+
+    chips.forEach(function (chip) {
+      var text = chip.textContent.toLowerCase();
+      chip.style.display = text.includes(query) ? 'inline-flex' : 'none';
+    });
+  }
+
+  if (input) {
+    input.addEventListener('input', filterChips);
+  }
+
+  document.querySelectorAll('.tabs .tab a').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      setTimeout(filterChips, 0);
+    });
+  });
+
+});
+</script>
+
 </body>
 
 </html>
