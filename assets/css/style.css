@@ -1081,3 +1081,38 @@ small {
     max-width: 100%;
   }
 }
+
+/* =========================
+   NES / Retro iframe (Ninja Gaiden) — taller without breaking
+========================= */
+
+/* Use this class only on the Ninja Gaiden frame */
+.game-frame.nes {
+  aspect-ratio: 9 / 16;   /* tall like emulator view on mobile */
+  max-height: 85vh;       /* prevents it from getting too huge */
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
+/* =========================
+   Force game-note visibility
+========================= */
+
+.game-note {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 0.75;
+  color: #555;
+  margin-top: 8px;
+  text-align: center;
+}
