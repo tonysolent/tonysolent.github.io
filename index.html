@@ -64,21 +64,24 @@
       "url": "https://www.tonylivins.com/",
       "image": "https://www.tonylivins.com/assets/img/tony-livins.jpg",
       "jobTitle": ["AI Engineer", "Data Scientist", "Author"],
+      "authorOf": [
+        { "@id": "https://www.tonylivins.com/#book-explainable-ai" },
+        { "@id": "https://www.tonylivins.com/#book-intelligence-not-consciousness" }
+      ],
       "hasOccupation": [
-  {
-    "@type": "Occupation",
-    "name": "Artificial Intelligence Engineer",
-    "occupationLocation": {
-      "@type": "Country",
-      "name": "United Kingdom"
-    }
-  },
-  {
-    "@type": "Occupation",
-    "name": "Author"
-  }
-],
-
+        {
+          "@type": "Occupation",
+          "name": "Artificial Intelligence Engineer",
+          "occupationLocation": {
+            "@type": "Country",
+            "name": "United Kingdom"
+          }
+        },
+        {
+          "@type": "Occupation",
+          "name": "Author"
+        }
+      ],
       "description": "AI Engineer, Data Scientist, and author writing about explainable AI, responsible AI, and the limits of machine learning.",
       "alumniOf": [
         {
@@ -99,13 +102,13 @@
         "Technical Writing"
       ],
       "sameAs": [
-    "https://amazon.com/author/tonylivins",
-    "https://github.com/tonysolent",
-    "https://www.linkedin.com/",
-    "https://medium.com/@sirtonylivins",
-    "https://orcid.org/0009-0006-5965-3542",
-    "https://scholar.google.com/citations?user=sWEpSR0AAAAJ&hl=en"
-  ]
+        "https://amazon.com/author/tonylivins",
+        "https://github.com/tonysolent",
+        "https://www.linkedin.com/",
+        "https://medium.com/@sirtonylivins",
+        "https://orcid.org/0009-0006-5965-3542",
+        "https://scholar.google.com/citations?user=sWEpSR0AAAAJ&hl=en"
+      ]
     },
 
     {
@@ -114,21 +117,28 @@
       "name": "Explainable AI: Why Black Boxes Are Dangerous",
       "author": { "@id": "https://www.tonylivins.com/#tony" },
       "inLanguage": "en",
+      "bookFormat": "https://schema.org/EBook",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ASIN",
+        "value": "B0GHZKCJXZ"
+      },
       "image": "https://www.tonylivins.com/assets/img/books/tony-livins-explainable-ai-cover.jpg",
       "url": "https://amzn.eu/d/fuw8nNL",
+      "sameAs": [
+        "https://play.google.com/store/books/details?id=OxWzEQAAQBAJ"
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Tony Livins"
+      },
+      "datePublished": "2026-01-21",
       "about": [
         "Explainable AI",
         "Transparency",
         "Accountability",
         "Responsible AI",
         "Machine Learning"
-      ],
-      "workExample": [
-        {
-          "@type": "Book",
-          "bookFormat": "https://schema.org/EBook",
-          "url": "https://amzn.eu/d/fuw8nNL"
-        }
       ]
     },
 
@@ -138,25 +148,33 @@
       "name": "Intelligence Is Not Consciousness: What AI Can Do, What It Can't, and Why That Distinction Will Define the Future",
       "author": { "@id": "https://www.tonylivins.com/#tony" },
       "inLanguage": "en",
+      "bookFormat": "https://schema.org/EBook",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ASIN",
+        "value": "B0GJ6N95FL"
+      },
       "image": "https://www.tonylivins.com/assets/img/books/tony-livins-intelligence-not-consciousness-cover.jpg",
       "url": "https://amzn.eu/d/f4hZMUw",
+      "sameAs": [
+        "https://play.google.com/store/books/details?id=Oee1EQAAQBAJ"
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Tony Livins"
+      },
+      "datePublished": "2026-01-21",
       "about": [
         "Artificial Intelligence",
         "Consciousness",
         "Philosophy of Mind",
         "Limits of Computation"
-      ],
-      "workExample": [
-        {
-          "@type": "Book",
-          "bookFormat": "https://schema.org/EBook",
-          "url": "https://amzn.eu/d/f4hZMUw"
-        }
       ]
     }
   ]
 }
 </script>
+
 
 <!-- JSON-LD: WebSite -->
 <script type="application/ld+json">
@@ -1249,6 +1267,7 @@ document.addEventListener('DOMContentLoaded', function () {
       </div>
     </section>
 
+
 <!-- Books Section -->
 <section id="books" class="section scrollspy">
   <h3 class="page-title white-text teal">Books</h3>
@@ -1735,7 +1754,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <!-- ZType -->
 <h5 style="margin-top:50px;">ZType - Typing Shooter</h5>
 <p style="font-size:0.9rem; opacity:0.75;">
-  A fast-paced HTML5 typing game demonstrating keyboard interaction and game logic.
+  
 </p>
 
 <div style="
