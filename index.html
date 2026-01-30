@@ -1335,21 +1335,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     <div class="card-action center-align">
       <a href="https://amzn.eu/d/fuw8nNL"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="teal-text hoverline">
-        View on Amazon
-      </a>
+   target="_blank"
+   rel="noopener noreferrer"
+   class="teal-text hoverline"
+   data-track="amazon"
+   data-book="Explainable AI">
+  View on Amazon
+</a>
+
       <span class="grey-text text-darken-1" style="margin:0 8px;">|</span>
       <a href="https://play.google.com/store/books/details?id=OxWzEQAAQBAJ"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="teal-text hoverline">
-        View on Google Books
-      </a>
-    </div>
-  </article>
+   target="_blank"
+   rel="noopener noreferrer"
+   class="teal-text hoverline"
+   data-track="google_books"
+   data-book="Explainable AI">
+  View on Google Books
+</a>
 </div>
+
+  </article>
+
 
 <!-- Book 2 -->
 <div class="col s12 m6">
@@ -1392,26 +1398,44 @@ document.addEventListener('DOMContentLoaded', function () {
       </p>
     </div>
 
-    <div class="card-action center-align">
-      <a href="https://amzn.eu/d/f4hZMUw"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="teal-text hoverline">
-        View on Amazon
-      </a>
-      <span class="grey-text text-darken-1" style="margin:0 8px;">|</span>
-      <a href="https://play.google.com/store/books/details?id=Oee1EQAAQBAJ"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="teal-text hoverline">
-        View on Google Books
-      </a>
-    </div>
-  </article>
+   <div class="card-action center-align">
+  <a href="https://play.google.com/store/books/details?id=Oee1EQAAQBAJ"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="teal-text hoverline"
+     data-track="google_books"
+     data-book="Intelligence Is Not Consciousness">
+    View on Google Books
+  </a>
 </div>
+  </article>
+
 
 
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  document.querySelectorAll('a[data-track]').forEach(function (link) {
+    link.addEventListener('click', function () {
+
+      var platform = this.getAttribute('data-track');
+      var book = this.getAttribute('data-book') || 'unknown';
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'book_click', {
+          event_category: 'Books',
+          event_label: platform,
+          book_title: book
+        });
+      }
+
+    });
+  });
+
+});
+</script>
 
 
 
