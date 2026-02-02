@@ -1116,3 +1116,13 @@ small {
   margin-top: 8px;
   text-align: center;
 }
+
+.newsletter-card {
+  margin-top: 94px;
+}
+
+
+/* Ensure uniform spacing between cards */
+.section .card {
+  margin-bottom: 24px;
+}
