@@ -1844,128 +1844,171 @@ document.addEventListener('DOMContentLoaded', function () {
 
   <div class="container game-container">
 
-    
-<p class="game-note">
-  Best played on desktop with a keyboard. Fullscreen recommended.<br>
-  Support the original creators.
-</p>
+    <p class="game-note center-align">
+      Best played on desktop with a keyboard. Fullscreen recommended.<br>
+      Support the original creators.
+    </p>
 
+    <!-- OUTER WRAPPER (buttons live here) -->
+    <div class="game-carousel-shell">
 
-    <!-- Batman -->
-<h5 class="game-title">Game-1</h5>
+      <!-- LEFT BUTTON (outside frame) -->
+      <button type="button" class="carousel-btn left" onclick="tlChangeGame(-1)" aria-label="Previous game">
+        &#10094;
+      </button>
 
-<div class="game-frame nes">
-  <iframe
-    src="https://www.retrogames.cc/embed/22113-batman-the-video-game-usa.html"
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    allowfullscreen>
-  </iframe>
-</div>
+      <!-- VIEWPORT (clips slides, NOT the buttons) -->
+      <div class="game-carousel-viewport">
+        <div class="game-carousel-track" id="gameCarouselTrack">
 
+          <!-- Game 1 -->
+          <div class="game-slide">
+            <h5 class="game-title">Game-1</h5>
+            <div class="game-frame nes">
+              <iframe
+                src="https://www.retrogames.cc/embed/22113-batman-the-video-game-usa.html"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
 
+          <!-- Game 2 -->
+          <div class="game-slide">
+            <h5 class="game-title">Game-2</h5>
+            <div class="game-frame nes">
+              <iframe
+                src="https://www.retrogames.cc/embed/21407-ninja-gaiden-episode-iii-the-ancient-ship-of-doom-usa.html"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
 
+          <!-- Game 3 -->
+          <div class="game-slide">
+            <h5 class="game-title">Game-3</h5>
+            <div class="game-frame nes">
+              <iframe
+                src="https://www.retrogames.cc/embed/20885-mitsume-ga-tooru-japan-en-by-spoony-bard-v1-01.html"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
 
+          <!-- Game 4 -->
+          <div class="game-slide">
+            <h5 class="game-title">Game-4</h5>
+            <div class="game-frame nes">
+              <iframe
+                src="https://www.retrogames.cc/embed/18031-mighty-final-fight-usa.html"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
 
-    <!-- Ninja Gaiden -->
-     <h5 class="game-title">Game-2</h5>
-    <div class="game-frame nes">
-  <iframe
-    src="https://www.retrogames.cc/embed/21407-ninja-gaiden-episode-iii-the-ancient-ship-of-doom-usa.html"
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    allowfullscreen>
-  </iframe>
+          <!-- Game 5 -->
+          <div class="game-slide">
+            <h5 class="game-title">Game-5</h5>
+            <div class="game-frame nes">
+              <iframe
+                src="https://www.retrogames.cc/embed/43044-pokemon-platinum-version-usa-rev-1.html"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
 
+          <!-- Game 6 -->
+          <div class="game-slide">
+            <h5 class="game-title">Game-6</h5>
+            <div class="game-frame nes">
+              <iframe
+                src="https://www.retrogames.cc/embed/21073-little-nemo-the-dream-master-usa.html"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
 
-    </div>
+          <!-- Game 7 -->
+          <div class="game-slide">
+            <h5 class="game-title">Game-7</h5>
+            <div class="game-frame nes">
+              <iframe
+                src="https://www.retrogames.cc/embed/16841-contra-usa.html"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
 
-        <!-- Three Eyed Boy -->
-     <h5 class="game-title">Game-3</h5>
-    <div class="game-frame nes">
-  <iframe
-    src="https://www.retrogames.cc/embed/20885-mitsume-ga-tooru-japan-en-by-spoony-bard-v1-01.html" 
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    allowfullscreen>
-  </iframe>
+          <!-- Game 8 -->
+          <div class="game-slide">
+            <h5 class="game-title">Game-8</h5>
+            <div class="game-card">
+              <div class="game-frame tall">
+                <iframe
+                  src="https://zty.pe/"
+                  scrolling="no"
+                  sandbox="allow-scripts allow-same-origin allow-pointer-lock"
+                  title="ZType Typing Game">
+                </iframe>
+              </div>
+              <p class="game-note">Best played on desktop with keyboard.</p>
+            </div>
+          </div>
 
-
-    </div>
-
-
-
-     <!-- Mighty Final Fight -->
-     <h5 class="game-title">Game-4</h5>
-    <div class="game-frame nes">
-  <iframe
-    src="https://www.retrogames.cc/embed/18031-mighty-final-fight-usa.html"
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    allowfullscreen>
-  </iframe>
-
-    </div>
-
-
-     <!-- Pokemon Platinum -->
-     <h5 class="game-title">Game-5</h5>
-    <div class="game-frame nes">
-  <iframe
-    src="https://www.retrogames.cc/embed/43044-pokemon-platinum-version-usa-rev-1.html"
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    allowfullscreen>
-  </iframe>
-
-    </div>
-
-
-
-<!-- Little Nemo Dream Master -->
-     <h5 class="game-title">Game-6</h5>
-    <div class="game-frame nes">
-  <iframe
-    src="https://www.retrogames.cc/embed/21073-little-nemo-the-dream-master-usa.html"
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    allowfullscreen>
-  </iframe>
-
-    </div>
-
-
- <!--Contra -->
-     <h5 class="game-title">Game-7</h5>
-   <div class="game-frame nes">
-  <iframe
-      src="https://www.retrogames.cc/embed/16841-contra-usa.html"
-      loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    allowfullscreen>
-  </iframe>
-  
-   
-    </div>
-      
-    <!-- ZType -->
-     <h5 class="game-title">Game-8</h5>
-    <div class="game-card">
-      <div class="game-frame tall">
-        <iframe
-          src="https://zty.pe/"
-          scrolling="no"
-          sandbox="allow-scripts allow-same-origin allow-pointer-lock"
-          title="ZType Typing Game">
-        </iframe>
+        </div>
       </div>
-      
-      <p class="game-note">Best played on desktop with keyboard.</p>
-    </div>
 
+      <!-- RIGHT BUTTON (outside frame) -->
+      <button type="button" class="carousel-btn right" onclick="tlChangeGame(1)" aria-label="Next game">
+        &#10095;
+      </button>
+
+    </div>
   </div>
 </section>
 
+
+<!-- JS script for game section -->
+<script>
+  (function () {
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      const track = document.getElementById("gameCarouselTrack");
+      if (!track) return;
+      track.style.transform = "translateX(-" + (currentIndex * 100) + "%)";
+    }
+
+    window.tlChangeGame = function (direction) {
+      const track = document.getElementById("gameCarouselTrack");
+      if (!track) return;
+
+      const totalSlides = track.children.length;
+      currentIndex = currentIndex + direction;
+
+      if (currentIndex < 0) currentIndex = totalSlides - 1;
+      if (currentIndex >= totalSlides) currentIndex = 0;
+
+      updateCarousel();
+    };
+
+    window.addEventListener("resize", updateCarousel);
+    window.addEventListener("load", updateCarousel);
+  })();
+</script>
 
 
   <!-- typed.js -->
