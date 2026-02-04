@@ -1122,7 +1122,76 @@ small {
 }
 
 
-/* Ensure uniform spacing between cards */
-.section .card {
-  margin-bottom: 24px;
+
+
+
+
+
+
+/* ===== Carousel shell holds buttons OUTSIDE the viewport ===== */
+.game-carousel-shell {
+  position: relative;
+  width: 100%;
+  margin-top: 24px;
+}
+
+/* ===== Only the viewport clips slides (buttons remain visible) ===== */
+.game-carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* ===== Track moves left/right ===== */
+.game-carousel-track {
+  display: flex;
+  transition: transform 0.35s ease;
+  will-change: transform;
+}
+
+/* ===== Each slide takes full width ===== */
+.game-slide {
+  flex: 0 0 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 16px;
+}
+
+/* ===== Buttons sit OUTSIDE the frame (and outside viewport) ===== */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #009688;
+  color: #fff;
+  border: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 50;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.carousel-btn.left {
+  left: -18px; /* outside */
+}
+
+.carousel-btn.right {
+  right: -18px; /* outside */
+}
+
+.carousel-btn:hover {
+  background: #00796b;
+}
+
+.carousel-btn:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+/* Mobile tweak so buttons don't go off-screen */
+@media (max-width: 600px) {
+  .carousel-btn.left { left: -10px; }
+  .carousel-btn.right { right: -10px; }
+  .carousel-btn { width: 46px; height: 46px; font-size: 22px; }
 }
