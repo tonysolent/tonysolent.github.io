@@ -1195,3 +1195,22 @@ small {
   .carousel-btn.right { right: -10px; }
   .carousel-btn { width: 46px; height: 46px; font-size: 22px; }
 }
+
+
+
+/* Signature styling */
+.signature-image {
+  width: 100%;
+  max-width: 520px;
+  margin: 32px auto 12px;
+  display: block;
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .signature-image {
+    max-width: 360px;
+    margin-top: 28px;
+  }
+}
+
